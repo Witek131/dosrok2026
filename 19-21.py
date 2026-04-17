@@ -3,7 +3,7 @@ def f(x, y, p):
     if p ==0:
         return 0
     h = [f(x + 1, y, p - 1), f(x, y + 1, p - 1), f(x, y * 3, p - 1), f(x * 3, y, p - 1)]
-    return any(h) if p % 2 == 1 else all(h)
+    return any(h) if p % 2 == 1 else any(h)
 
 
 print([i for i in range(1, 59) if f(i, 6, 2)])
